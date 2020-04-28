@@ -87,3 +87,29 @@ print(hstack((data,data,data))) # hstack = horizontally
 
 data = data[:, newaxis]
 print(hstack((data, data, data)))
+
+
+
+# Arithmetic Operations
+
+x = array([1, 2, 3, 4]).reshape(2, 2) # reshape akan membuat matrix 2 x 2
+z = array([[1, 2]]) # matrix bisa mengunakan resahpe or list -> [[ ]] 2x
+
+print(x/z) # matirx 2x2 / 1x2 = x /z ( 1:1 = 1 , 3:1 = 3 , 2:2 =1 , 4:2 = 2)
+zz = concatenate([z,z], axis=0) # axis=0 unutk membuat matrix 2,2 dan axis=1 untuk membuat 1x4
+print(zz) # matrix (2,2) karena mengunakan concatenante
+
+z = array([[1], [2]])
+zz = concatenate([z,z], axis=1) # membuat menjadi 2 di mensi yg sama dengan x tetapi valuna berbeda
+print(zz) # fungsi axis=1 untuk menduplikatin value tersebut jadi ([1,1] [2,2])
+
+""" 
+Operator    ||      Operation
++, +=               Addition
+-, -=               Subtraction
+*, *=               Multiplication
+/, /=               Division
+//, //=             Integer Division
+**, **=             Exponentiation
+ 
+ """
